@@ -587,6 +587,7 @@ footer{
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: 2rem 0;
+    max-width: 100%;
 }
 .footer-content{
     display: grid;
@@ -710,6 +711,12 @@ ul.social-list li a:hover{
         width: calc(100% - 6rem);
     }
     @media only screen and (max-width:768px){
+        .main-title{
+            font-size: 5rem;
+        }
+        .main-slogan{
+            font-size: 1rem;
+        }
         .sec-grid{
             grid-template-columns: 1fr;
         }
@@ -724,9 +731,14 @@ ul.social-list li a:hover{
         .contact-content h2{
             font-size: 3.5rem;
         }
+        .footer-content h4{
+            display: none;
+        }
         .footer-content{
-            grid-template-columns:2fr 3fr 2fr;
-            white-space: nowrap;
+            display:flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: flex-start;
         }
         .copy-right,.social-media{
             transform: scale(.7,.7);
